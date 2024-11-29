@@ -12,7 +12,7 @@ namespace Avaliacao1 {
         public String cpf { get;  set; }
         private static int contadorId = 1;
 
-        public Cliente(String nome, int idade, String cpf) {
+        public Cliente(string nome, int idade, string cpf) {
             this.id = contadorId++;
             this.nome = nome;
             this.idade = idade;

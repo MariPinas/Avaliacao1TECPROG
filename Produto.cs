@@ -9,13 +9,15 @@ namespace Avaliacao1 {
         public int id { get; private set; }
         public String marca { get; set; }
         public String modelo { get; set; }
+        public String descricao { get; set; }
         public float preco { get; set; }
         private static int contadorId = 1;
 
-        public Produto(string marca, string modelo, float preco) {
+        public Produto(string marca, string modelo, string descricao, float preco) {
             this.id = contadorId++;
             this.marca = marca;
             this.modelo = modelo;
+            this.descricao = descricao;
             this.preco = preco;
         }
 
@@ -23,6 +25,7 @@ namespace Avaliacao1 {
             Console.WriteLine($"ID: {p.id}");
             Console.WriteLine($"Marca: {p.marca}");
             Console.WriteLine($"Modelo: {p.modelo}");
+            Console.WriteLine($"Descrição: {p.descricao}");
             Console.WriteLine($"Preco: {p.preco}");
         }
     }
