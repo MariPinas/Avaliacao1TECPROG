@@ -35,6 +35,7 @@ namespace Avaliacao1 {
         public Boolean delete(int id) {
             Cliente clienteExiste = read(id);
             if (clienteExiste != null) {
+                //implementar checar se estar na venda
                 databaseClientes.Remove(clienteExiste);
                 return true;
             }
