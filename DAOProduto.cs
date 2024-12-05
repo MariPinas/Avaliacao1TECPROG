@@ -13,7 +13,7 @@ namespace Avaliacao1 {
         }
 
         public Boolean update(Produto produto) {
-            Produto produtoExiste = read(produto.id);
+            Produto produtoExiste = get(produto.id);
             if (produtoExiste != null) {
                 produtoExiste.marca = produto.marca;
                 produtoExiste.modelo = produto.modelo;
@@ -23,7 +23,7 @@ namespace Avaliacao1 {
             }
             return false;
         }
-        public Produto read(int id) {
+        public Produto get(int id) {
             foreach (Produto p in databaseProduto) {
                 if (p.id == id)
                     return p;
@@ -32,7 +32,7 @@ namespace Avaliacao1 {
         }
 
         public Boolean delete(int id) {
-            Produto produtoExiste = read(id);
+            Produto produtoExiste = get(id);
             if (produtoExiste != null) {
                 databaseProduto.Remove(produtoExiste);
                 return true;

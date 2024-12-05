@@ -13,7 +13,7 @@ namespace Avaliacao1 {
         }
 
         public Boolean update(Vendas venda) {
-            Vendas vendaExiste = read(venda.id);
+            Vendas vendaExiste = get(venda.id);
             if (vendaExiste != null) {
                 vendaExiste.cliente = venda.cliente;
                 vendaExiste.total = venda.total;
@@ -21,7 +21,8 @@ namespace Avaliacao1 {
             }
             return false;
         }
-        public Vendas read(int id) {
+
+        public Vendas get(int id) {
             foreach (Vendas v in databaseVendas) {
                 if (v.id == id)
                     return v;
@@ -30,7 +31,7 @@ namespace Avaliacao1 {
         }
 
         public Boolean delete(int id) {
-            Vendas vendaExiste = read(id);
+            Vendas vendaExiste = get(id);
             if (vendaExiste != null) {
                 databaseVendas.Remove(vendaExiste);
                 return true;

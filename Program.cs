@@ -8,6 +8,10 @@ namespace Avaliacao1 {
     internal class Program {
         static void Main(string[] args) {
             DAOCliente daoCliente = new DAOCliente();
+            DAOProduto daoProduto = new DAOProduto();
+            DAOVendas daoVenda = new DAOVendas();
+
+
 
 
             //create cliente
@@ -18,9 +22,9 @@ namespace Avaliacao1 {
             Cliente clienteUP = new Cliente("Mariana2", 19, "123456");
             daoCliente.update(clienteUP);
             //delete cliente
-            Cliente clienteD = daoCliente.read(1);
+            Cliente clienteD = daoCliente.get(1);
 
-            if (daoCliente.delete(clienteD.id))
+            if (daoCliente.delete(clienteD.id, ))
                 Console.WriteLine("Exclusao com sucesso");
             else
                 Console.WriteLine("Exclusao nao realizada");

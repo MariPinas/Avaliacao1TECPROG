@@ -15,7 +15,7 @@ namespace Avaliacao1 {
         }
 
         public Boolean update(Cliente cliente) {
-            Cliente clienteExiste = read(cliente.id);
+            Cliente clienteExiste = get(cliente.id);
             if (clienteExiste != null) {
                 clienteExiste.idade = cliente.idade;
                 clienteExiste.nome = cliente.nome;
@@ -24,7 +24,8 @@ namespace Avaliacao1 {
             }
             return false;
         }
-        public Cliente read(int id) {
+
+        public Cliente get(int id) {
             foreach(Cliente c in databaseClientes) {
                 if(c.id == id)
                     return c;
@@ -32,8 +33,11 @@ namespace Avaliacao1 {
             return null;
         }
 
-        public Boolean delete(int id) {
-            Cliente clienteExiste = read(id);
+        public Boolean delete(int id, DAOVendas vendasFeitas) {
+            if (vendasFeitas.get(id) != null) {
+                Console.WriteLine("Não foi possível deletar esse cliente pois ele já possui vendas registradas.");
+            }
+            Cliente clienteExiste = get(id);
             if (clienteExiste != null) {
                 //implementar checar se estar na venda
                 databaseClientes.Remove(clienteExiste);
