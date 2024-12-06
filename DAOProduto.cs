@@ -11,18 +11,6 @@ namespace Avaliacao1 {
         public void create(Produto produto) {
             databaseProduto.Add(produto);
         }
-
-        public Boolean update(Produto produto) {
-            Produto produtoExiste = get(produto.id);
-            if (produtoExiste != null) {
-                produtoExiste.marca = produto.marca;
-                produtoExiste.modelo = produto.modelo;
-                produtoExiste.descricao = produto.descricao;
-                produtoExiste.preco = produto.preco;
-                return true;
-            }
-            return false;
-        }
         public Produto get(int id) {
             foreach (Produto p in databaseProduto) {
                 if (p.id == id) {

@@ -14,17 +14,6 @@ namespace Avaliacao1 {
             databaseClientes.Add(cliente);
         }
 
-        public Boolean update(Cliente cliente) {
-            Cliente clienteExiste = get(cliente.id);
-            if (clienteExiste != null) {
-                clienteExiste.idade = cliente.idade;
-                clienteExiste.nome = cliente.nome;
-                clienteExiste.cpf = cliente.cpf;
-                return true;
-            }
-            return false;
-        }
-
         public Cliente get(int id) {
             foreach(Cliente c in databaseClientes) {
                 if(c.id == id) {
@@ -49,6 +38,11 @@ namespace Avaliacao1 {
         }
 
         public void getAll() {
+            if (databaseClientes.Count == 0) {
+                Console.WriteLine("Lista Vazia");
+                return;
+            }
+
             Console.WriteLine("=== Listando Clientes ===");
             foreach (Cliente c in databaseClientes) {
                 Console.WriteLine($"--*  Cliente número {c.id}  *--");

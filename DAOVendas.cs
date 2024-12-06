@@ -8,8 +8,8 @@ namespace Avaliacao1 {
     internal class DAOVendas {
         List<Vendas> databaseVendas = new List<Vendas>();
 
-        public void create(Vendas cliente) {
-            databaseVendas.Add(cliente);
+        public void create(Vendas venda) {
+            databaseVendas.Add(venda);
         }
 
         public Boolean update(Vendas venda) {
@@ -69,13 +69,21 @@ namespace Avaliacao1 {
             Console.WriteLine("=== Listando Vendas ===");
             foreach (Vendas v in databaseVendas) {
                 Console.WriteLine($"--*  Venda número {v.id}  *--");
-                Console.WriteLine($"ID da Venda: {v.id}");
-
-                foreach (Vendas venda in databaseVendas) {
-                    venda.ExibirVenda();
-                }
-                Console.WriteLine($"TOTAL: {v.total}");
+                v.ExibirVenda();
             }
+        }
+
+        public void getTotalizacao() {
+            float total = 0;
+            int qtd = 0;
+
+            Console.WriteLine("=== Totalizacao Vendas ===");
+            foreach (Vendas v in databaseVendas) {
+                total += v.total;
+                qtd++;
+            }
+            Console.WriteLine($"TOTAL: {total}");
+            Console.WriteLine($"Quantidade de Vendas: {qtd}");
             Console.WriteLine("=========================");
         }
 
