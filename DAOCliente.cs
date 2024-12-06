@@ -16,22 +16,24 @@ namespace Avaliacao1 {
 
         public Cliente get(int id) {
             foreach(Cliente c in databaseClientes) {
-                if(c.id == id)
+                if(c.id == id) {
+                    Console.WriteLine("Cliente encontrado! :D");
+                    printById(c.id);
                     return c;
+                }
             }
             return null;
         }
 
-        public Boolean delete(int id, DAOVendas vendasFeitas) {
-            if (vendasFeitas.get(id) != null) {
-                Console.WriteLine("Não foi possível deletar esse cliente pois ele já possui vendas registradas.");
-            }
-            Cliente clienteExiste = get(id);
-            if (clienteExiste != null) {
-                //implementar checar se estar na venda
+        public Boolean delete(int idCliente, DAOVendas vendasFeitas) {
+            // Deleta o cliente se o cliente existe E não possui vendas feitas
+            Cliente clienteExiste = get(idCliente);
+            if (clienteExiste != null && !vendasFeitas.getVendaDoCliente(idCliente)) {
                 databaseClientes.Remove(clienteExiste);
+                Console.WriteLine("Cliente deletado com sucesso! :D");
                 return true;
             }
+            Console.WriteLine("Cliente não deletado - inexistente ou possui vendas registradas");
             return false;
         }
 
@@ -44,11 +46,18 @@ namespace Avaliacao1 {
             Console.WriteLine("=== Listando Clientes ===");
             foreach (Cliente c in databaseClientes) {
                 Console.WriteLine($"--*  Cliente número {c.id}  *--");
-                Console.WriteLine($"ID: {c.id}");
                 Console.WriteLine($"Nome: {c.nome}");
                 Console.WriteLine($"CPF: {c.cpf}");          
             }
             Console.WriteLine("=========================");
+        }
+
+        public void printById(int idCliente) {
+            Cliente cliente = get(idCliente);
+            if (cliente != null) {
+                Console.WriteLine($"Nome: {cliente.nome}");
+                Console.WriteLine($"CPF: {cliente.cpf}");
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Avaliacao1 {
     internal class Vendas {
-        List<Produto> produtosVenda = new List<Produto>();
+        public List<Produto> produtosVenda = new List<Produto>();
         public int id { get; private set; }
         public Cliente cliente { get; set; }
         public float total { get; set; }
