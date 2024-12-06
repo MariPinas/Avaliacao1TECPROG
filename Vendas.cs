@@ -12,7 +12,7 @@ namespace Avaliacao1 {
         public float total { get; set; }
         private static int contadorId = 1;
 
-        public Vendas(Cliente cliente, float total, string cpf) {
+        public Vendas(Cliente cliente, float total) {
             this.id = contadorId++;
             this.cliente = cliente;
             this.total = 0;
@@ -20,19 +20,28 @@ namespace Avaliacao1 {
 
         public void ExibirVenda() {
             Console.WriteLine($"==== Exibicao da venda de ID: {this.id} ====");
-            Console.WriteLine($"Dados do Comprador: {this.cliente} ");
+            Console.WriteLine($"ID do Comprador: {this.cliente.id} ");
 
             foreach (Produto i in produtosVenda) {
                 i.getProduto(i);
+                Console.WriteLine($"Quantidade: {i.quantidadeProduto}");
             }
             Console.WriteLine($"TOTAL DA COMPRA: {this.total}");
             Console.WriteLine("========================================================");
         }
 
         public Boolean addProduto(Produto p) {
+            
             if (p == null) {
                 return false;
             } else {
+                foreach (Produto produto in produtosVenda) {
+                    if (p.id == produto.id) {
+                        produto.quantidadeProduto += 1;
+                        total += p.preco;
+                        return true;
+                    }
+                }
                 produtosVenda.Add(p);
                 total += p.preco;
                 return true;
