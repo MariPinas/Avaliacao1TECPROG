@@ -25,18 +25,25 @@ namespace Avaliacao1 {
         }
         public Produto get(int id) {
             foreach (Produto p in databaseProduto) {
-                if (p.id == id)
+                if (p.id == id) {
+                    Console.WriteLine("Produto encontrado com sucesso! :D");
+                    printById(id);
                     return p;
+                }
             }
             return null;
         }
 
-        public Boolean delete(int id) {
-            Produto produtoExiste = get(id);
-            if (produtoExiste != null) {
+        public Boolean delete(int idProduto, DAOVendas vendasFeitas)
+        {
+            // Deleta o produto se ele existe E não foi vendido
+            Produto produtoExiste = get(idProduto);
+            if (produtoExiste != null && !vendasFeitas.getProdutoVendido(idProduto)) {
                 databaseProduto.Remove(produtoExiste);
+                Console.WriteLine("Produto deletado com sucesso! :D");
                 return true;
             }
+            Console.WriteLine("Produto não deletado - inexistente ou possui vendas registradas");
             return false;
         }
 
@@ -51,6 +58,19 @@ namespace Avaliacao1 {
                 Console.WriteLine($"Preço: {p.preco}");
             }
             Console.WriteLine("=========================");
+        }
+
+        public void printById(int idProduto)
+        {
+            Produto produto = get(idProduto);
+            if (produto != null)
+            {
+                Console.WriteLine($"ID: {produto.id}");
+                Console.WriteLine($"Marca: {produto.marca}");
+                Console.WriteLine($"Modelo: {produto.modelo}");
+                Console.WriteLine($"Descrição: {produto.descricao}");
+                Console.WriteLine($"Preço: R${produto.preco}");
+            }
         }
     }
 }

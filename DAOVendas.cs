@@ -24,12 +24,38 @@ namespace Avaliacao1 {
 
         public Vendas get(int id) {
             foreach (Vendas v in databaseVendas) {
-                if (v.id == id)
+                if (v.id == id) {
+                    Console.WriteLine("Venda encontrada! :D");
+                    printById(id);
                     return v;
+                }
             }
             return null;
         }
 
+        public Boolean getVendaDoCliente(int idCliente) {
+            // este método verifica se o cliente possui vendas registradas
+
+            foreach (Vendas venda in databaseVendas) {
+                if (venda.cliente.id == idCliente)
+                    return true;
+            }
+            return false;
+        }
+
+        public Boolean getProdutoVendido(int idProduto) {
+            // este método verifica se o produto já foi vendido
+
+            foreach (Vendas venda in databaseVendas){
+                foreach (Produto produto in venda.produtosVenda) { 
+                    if(produto.id == idProduto){
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        
         public Boolean delete(int id) {
             Vendas vendaExiste = get(id);
             if (vendaExiste != null) {
@@ -51,6 +77,22 @@ namespace Avaliacao1 {
                 Console.WriteLine($"TOTAL: {v.total}");
             }
             Console.WriteLine("=========================");
+        }
+
+        public void printById(int idVenda) {
+            Vendas venda = get(idVenda);
+            if (venda != null)
+            {
+                String produtos = "";
+                foreach (Produto produto in venda.produtosVenda) {
+                    produtos += "\t-" + produto.modelo + "   ..." + produto.quantidadeProduto + "x";
+                }
+
+                Console.WriteLine($"ID: {venda.id}");
+                Console.WriteLine($"Cliente: {venda.cliente.nome}");
+                Console.WriteLine($"Total da venda: {venda.total}");
+                Console.WriteLine($"Produtos: \n{produtos}");
+            }
         }
     }
 }
