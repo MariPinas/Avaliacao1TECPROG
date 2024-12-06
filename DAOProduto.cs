@@ -40,6 +40,7 @@ namespace Avaliacao1 {
             foreach (Produto p in databaseProduto) {
                 Console.WriteLine($"--*  Produto número {p.id}  *--");
                 Console.WriteLine($"ID: {p.id}");
+                Console.WriteLine($"Nome: {p.nome}");
                 Console.WriteLine($"Marca: {p.marca}");
                 Console.WriteLine($"Modelo: {p.modelo}");
                 Console.WriteLine($"Descrição: {p.descricao}");

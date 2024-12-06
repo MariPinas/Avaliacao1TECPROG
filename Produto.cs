@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Avaliacao1 {
     internal class Produto {
+        public string nome { get; set; }
         public int id { get; private set; }
         public String marca { get; set; }
         public String modelo { get; set; }
@@ -14,8 +15,9 @@ namespace Avaliacao1 {
         public int quantidadeProduto { get; set; }
        
 
-        public Produto(int id, string marca, string modelo, string descricao, float preco) {
+        public Produto(int id, string nome, string marca, string modelo, string descricao, float preco) {
             this.id = id;
+            this.nome = nome;
             this.marca = marca;
             this.modelo = modelo;
             this.descricao = descricao;
