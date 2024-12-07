@@ -17,8 +17,6 @@ namespace Avaliacao1 {
         public Cliente get(int id) {
             foreach(Cliente c in databaseClientes) {
                 if(c.id == id) {
-                    Console.WriteLine("Cliente encontrado! :D");
-                    printById(c.id);
                     return c;
                 }
             }
@@ -39,7 +37,7 @@ namespace Avaliacao1 {
 
         public void getAll() {
             if (databaseClientes.Count == 0) {
-                Console.WriteLine("Lista Vazia");
+                Console.WriteLine("Não existem clientes cadastrados! ");
                 return;
             }
 
@@ -47,6 +45,7 @@ namespace Avaliacao1 {
             foreach (Cliente c in databaseClientes) {
                 Console.WriteLine($"--*  Cliente número {c.id}  *--");
                 Console.WriteLine($"Nome: {c.nome}");
+                Console.WriteLine($"Nome: {c.idade}");
                 Console.WriteLine($"CPF: {c.cpf}");          
             }
             Console.WriteLine("=========================");

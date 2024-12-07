@@ -14,8 +14,6 @@ namespace Avaliacao1 {
         public Produto get(int id) {
             foreach (Produto p in databaseProduto) {
                 if (p.id == id) {
-                    Console.WriteLine("Produto encontrado com sucesso! :D");
-                    printById(id);
                     return p;
                 }
             }
@@ -36,6 +34,10 @@ namespace Avaliacao1 {
         }
 
         public void getAll() {
+            if (databaseProduto.Count == 0) {
+                Console.WriteLine("Não existem produtos cadastrados");
+                return;
+            }
             Console.WriteLine("=== Listando Produtos ===");
             foreach (Produto p in databaseProduto) {
                 Console.WriteLine($"--*  Produto número {p.id}  *--");

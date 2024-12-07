@@ -11,11 +11,11 @@ namespace Avaliacao1 {
         public String marca { get; set; }
         public String modelo { get; set; }
         public String descricao { get; set; }
-        public float preco { get; set; }
+        public double preco { get; set; }
         public int quantidadeProduto { get; set; }
        
 
-        public Produto(int id, string nome, string marca, string modelo, string descricao, float preco) {
+        public Produto(int id, string nome, string marca, string modelo, string descricao, double preco) {
             this.id = id;
             this.nome = nome;
             this.marca = marca;
@@ -26,11 +26,12 @@ namespace Avaliacao1 {
         }
 
         public void getProduto(Produto p) {
-            Console.WriteLine($"ID: {p.id}");
+            Console.WriteLine($"\nID: {p.id}");
+            Console.WriteLine($"{p.quantidadeProduto}x {p.nome}");
             Console.WriteLine($"Marca: {p.marca}");
             Console.WriteLine($"Modelo: {p.modelo}");
             Console.WriteLine($"Descrição: {p.descricao}");
-            Console.WriteLine($"Preco: {p.preco}");
+            Console.WriteLine($"Preço: {p.preco}");
         }
     }
 }

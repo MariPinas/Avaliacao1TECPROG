@@ -16,6 +16,7 @@ namespace Avaliacao1 {
             Vendas vendaExiste = get(venda.id);
             if (vendaExiste != null) {
                 vendaExiste.cliente = venda.cliente;
+                vendaExiste.produtosVenda = venda.produtosVenda;
                 vendaExiste.total = venda.total;
                 return true;
             }
@@ -25,8 +26,6 @@ namespace Avaliacao1 {
         public Vendas get(int id) {
             foreach (Vendas v in databaseVendas) {
                 if (v.id == id) {
-                    Console.WriteLine("Venda encontrada! :D");
-                    printById(id);
                     return v;
                 }
             }
@@ -66,6 +65,10 @@ namespace Avaliacao1 {
         }
 
         public void getAll() {
+            if (databaseVendas.Count == 0) {
+                Console.WriteLine("Não existem vendas registradas! ");
+                return;
+            }
             Console.WriteLine("=== Listando Vendas ===");
             foreach (Vendas v in databaseVendas) {
                 Console.WriteLine($"--*  Venda número {v.id}  *--");
@@ -74,7 +77,7 @@ namespace Avaliacao1 {
         }
 
         public void getTotalizacao() {
-            float total = 0;
+            double total = 0;
             int qtd = 0;
 
             Console.WriteLine("=== Totalizacao Vendas ===");

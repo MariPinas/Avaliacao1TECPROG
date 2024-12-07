@@ -9,10 +9,10 @@ namespace Avaliacao1 {
         public List<Produto> produtosVenda = new List<Produto>();
         public int id { get; private set; }
         public Cliente cliente { get; set; }
-        public float total { get; set; }
+        public double total { get; set; }
         private static int contadorId = 1;
 
-        public Vendas(Cliente cliente, float total) {
+        public Vendas(Cliente cliente) {
             this.id = contadorId++;
             this.cliente = cliente;
             this.total = 0;
@@ -24,7 +24,6 @@ namespace Avaliacao1 {
 
             foreach (Produto i in produtosVenda) {
                 i.getProduto(i);
-                Console.WriteLine($"Quantidade: {i.quantidadeProduto}");
             }
             Console.WriteLine($"TOTAL DA COMPRA: {this.total}");
             Console.WriteLine("========================================================");

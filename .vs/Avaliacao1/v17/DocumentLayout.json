@@ -1,18 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aluno\\Desktop\\Prova1\\",
+  "WorkspaceRootPath": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\aluno\\desktop\\prova1\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\aluno\\desktop\\prova1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\aluno\\desktop\\prova1\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\flavi\\source\\repos\\avaliacao1tecprog\\vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\flavi\\source\\repos\\avaliacao1tecprog\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\flavi\\source\\repos\\avaliacao1tecprog\\daovendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daovendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\flavi\\source\\repos\\avaliacao1tecprog\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|c:\\users\\flavi\\source\\repos\\avaliacao1tecprog\\daoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,32 +38,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Vendas.cs",
+              "DocumentMoniker": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Vendas.cs",
+              "RelativeDocumentMoniker": "Vendas.cs",
+              "ToolTip": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Vendas.cs",
+              "RelativeToolTip": "Vendas.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:17:10.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DAOVendas.cs",
+              "DocumentMoniker": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\DAOVendas.cs",
+              "RelativeDocumentMoniker": "DAOVendas.cs",
+              "ToolTip": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\DAOVendas.cs",
+              "RelativeToolTip": "DAOVendas.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswEgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:12:17.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Produto.cs",
+              "RelativeDocumentMoniker": "Produto.cs",
+              "ToolTip": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Produto.cs",
+              "RelativeToolTip": "Produto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswBwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T15:46:01.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DAOProduto.cs",
+              "DocumentMoniker": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\DAOProduto.cs",
+              "RelativeDocumentMoniker": "DAOProduto.cs",
+              "ToolTip": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\DAOProduto.cs",
+              "RelativeToolTip": "DAOProduto.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwCUAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T15:45:57.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "DAOCliente.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\Prova1\\DAOCliente.cs",
+              "DocumentMoniker": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\DAOCliente.cs",
               "RelativeDocumentMoniker": "DAOCliente.cs",
-              "ToolTip": "C:\\Users\\aluno\\Desktop\\Prova1\\DAOCliente.cs",
+              "ToolTip": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\DAOCliente.cs",
               "RelativeToolTip": "DAOCliente.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowC4AAABAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAD4vy8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T23:19:24.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\Prova1\\Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Cliente.cs",
               "RelativeDocumentMoniker": "Cliente.cs",
-              "ToolTip": "C:\\Users\\aluno\\Desktop\\Prova1\\Cliente.cs",
+              "ToolTip": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Cliente.cs",
               "RelativeToolTip": "Cliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -56,13 +140,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aluno\\Desktop\\Prova1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\aluno\\Desktop\\Prova1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\flavi\\source\\repos\\Avaliacao1TECPROG\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAIwLkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T22:54:47.025Z",
               "EditorCaption": ""
