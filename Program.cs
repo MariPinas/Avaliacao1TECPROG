@@ -191,7 +191,7 @@ namespace Avaliacao1 {
                                             Console.WriteLine("Não é possível atualizar venda sem produtos...");
                                         else
                                         {
-                                            if (daoVenda.update(venda))
+                                            if (daoVenda.update(venda) == true)
                                                 Console.WriteLine("Venda atualizada com sucesso!");
                                             else
                                                 Console.WriteLine("Não foi possível atualizar a venda...");
