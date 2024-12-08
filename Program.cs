@@ -18,7 +18,8 @@ namespace Avaliacao1 {
 
 
             do {
-                Console.WriteLine("\n==== Sistema de Vendas ====");
+                Console.Clear();
+                Console.WriteLine("\n\t\t==== Sistema de Vendas ====");
                 Console.WriteLine("\n [1] Cliente \t [2] Produto \t [3] Venda \t [4] Sair ");
                 Console.WriteLine("\n Escolha uma opcao do menu:");
                 string entrada = Console.ReadLine();
@@ -28,12 +29,13 @@ namespace Avaliacao1 {
                 }
 
 
-                Console.WriteLine("=========================================");
+                Console.WriteLine("\n ====================*==================== \n");
 
                 switch (op) {
                     case 1:
+                        Console.Clear();
                         do {
-                            Console.WriteLine("\n ==== CLIENTE ====");
+                            Console.WriteLine("\n\t\t\t\t\t==== CLIENTE ====");
                             Console.WriteLine("\n [1] Cadastrar Cliente \t [2] Procurar Cliente \t [3] Deletar Cliente \t [4] Listar Clientes \t [5] Sair");
                             Console.WriteLine("\n Escolha uma opcao do menu:");
                             string entrada1 = Console.ReadLine();
@@ -42,7 +44,7 @@ namespace Avaliacao1 {
                                 Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
                                 continue;
                             }
-                            Console.WriteLine("\n ========================================= \n");
+                            Console.WriteLine("\n ====================*==================== \n");
 
                             switch (op1) {
                                 case 1:
@@ -87,9 +89,10 @@ namespace Avaliacao1 {
                         } while (op1 != 5);
                         break;
                     case 2:
+                        Console.Clear();
                         do {
-                            Console.WriteLine("\n==== PRODUTO ====");
-                            Console.WriteLine("[1] Cadastrar Produto \t [2] Procurar Produto \t [3] Deletar Produto \t [4] Listar Produto \t [5] Sair");
+                            Console.WriteLine("\n\t\t\t\t\t==== PRODUTO ====");
+                            Console.WriteLine("\n[1] Cadastrar Produto \t [2] Procurar Produto \t [3] Deletar Produto \t [4] Listar Produto \t [5] Sair");
                             Console.WriteLine("\n Escolha uma opção do menu:");
                             string entrada1 = Console.ReadLine();
                             if (!int.TryParse(entrada1, out op1))
@@ -97,7 +100,7 @@ namespace Avaliacao1 {
                                 Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
                                 continue;
                             }
-                            Console.WriteLine("=========================================");
+                            Console.WriteLine ("\n ====================*==================== \n");
 
                             switch (op1) {
                                 case 1:
@@ -143,9 +146,10 @@ namespace Avaliacao1 {
                         } while (op1 != 5);
                         break;
                     case 3:
-                        do {
-                            Console.WriteLine("\n==== VENDA ====");
-                            Console.WriteLine("[1] Registrar Venda \t [2] Procurar Venda \t [3] Atualizar Venda");
+                        Console.Clear();
+                        do { 
+                            Console.WriteLine("\n\t\t\t==== VENDA ====");
+                            Console.WriteLine("\n[1] Registrar Venda \t [2] Procurar Venda \t [3] Atualizar Venda");
                             Console.WriteLine("[4] Listar Vendas \t [5] Totalizar Vendas \t [6] Sair");
                             Console.WriteLine("\n Escolha uma opção do menu:");
                             string entrada1 = Console.ReadLine();
@@ -154,8 +158,7 @@ namespace Avaliacao1 {
                                 Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
                                 continue;
                             }
-                            Console.WriteLine("=========================================");
-
+                            Console.WriteLine("\n ====================*==================== \n");
                             switch (op1) {
                                 case 1:
                                     bool adicionouAlgo = false;

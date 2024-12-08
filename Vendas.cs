@@ -25,7 +25,7 @@ namespace Avaliacao1 {
             foreach (Produto i in produtosVenda) {
                 i.getProduto(i);
             }
-            Console.WriteLine($"TOTAL DA COMPRA: {this.total}");
+            Console.WriteLine($"TOTAL DA COMPRA: {this.total} REAIS");
             Console.WriteLine("========================================================");
         }
 

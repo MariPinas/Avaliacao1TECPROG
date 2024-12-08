@@ -29,7 +29,10 @@ namespace Avaliacao1 {
         public void getProduto(Produto p) {
             Console.WriteLine($"\nID: {p.id}");
             Console.WriteLine($"{p.quantidadeProduto}x {p.nome}");
-            Console.WriteLine($"Preço: {p.preco}");
+            Console.WriteLine($"Marca: {p.marca}");
+            Console.WriteLine($"Modelo: {p.modelo}");
+            Console.WriteLine($"Descrição: {p.descricao}");
+            Console.WriteLine($"Preço: {p.preco} reais");
         }
     }
 }

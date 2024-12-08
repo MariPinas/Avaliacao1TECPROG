@@ -85,7 +85,7 @@ namespace Avaliacao1 {
                 total += v.total;
                 qtd++;
             }
-            Console.WriteLine($"TOTAL: {total}");
+            Console.WriteLine($"TOTAL: {total} REAIS");
             Console.WriteLine($"Quantidade de Vendas: {qtd}");
             Console.WriteLine("=========================");
         }
@@ -101,7 +101,7 @@ namespace Avaliacao1 {
 
                 Console.WriteLine($"ID: {venda.id}");
                 Console.WriteLine($"Cliente: {venda.cliente.nome}");
-                Console.WriteLine($"Total da venda: {venda.total}");
+                Console.WriteLine($"Total da venda: {venda.total} REAIS");
                 Console.WriteLine($"Produtos: \n{produtos}");
             }
         }

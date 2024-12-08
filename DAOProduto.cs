@@ -46,7 +46,7 @@ namespace Avaliacao1 {
                 Console.WriteLine($"Marca: {p.marca}");
                 Console.WriteLine($"Modelo: {p.modelo}");
                 Console.WriteLine($"Descrição: {p.descricao}");
-                Console.WriteLine($"Preço: {p.preco}");
+                Console.WriteLine($"Preço: {p.preco} reais");
             }
             Console.WriteLine("=========================");
         }
