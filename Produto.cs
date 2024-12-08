@@ -13,10 +13,11 @@ namespace Avaliacao1 {
         public String descricao { get; set; }
         public double preco { get; set; }
         public int quantidadeProduto { get; set; }
-       
+        private static int contadorId = 1;
 
-        public Produto(int id, string nome, string marca, string modelo, string descricao, double preco) {
-            this.id = id;
+
+        public Produto(string nome, string marca, string modelo, string descricao, double preco) {
+            this.id = contadorId++;
             this.nome = nome;
             this.marca = marca;
             this.modelo = modelo;

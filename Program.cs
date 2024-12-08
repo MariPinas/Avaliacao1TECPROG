@@ -101,8 +101,8 @@ namespace Avaliacao1 {
 
                             switch (op1) {
                                 case 1:
-                                    Console.WriteLine("Informe o código do produto: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
+                                    //Console.WriteLine("Informe o código do produto: ");
+                                    //id = Convert.ToInt16(Console.ReadLine());
                                     Console.WriteLine("Informe o nome do produto: ");
                                     nome = Console.ReadLine();
                                     Console.WriteLine("Informe a marca do produto: ");
@@ -113,7 +113,7 @@ namespace Avaliacao1 {
                                     descricao = Console.ReadLine();
                                     Console.WriteLine("Informe o preço do produto: ");
                                     preco = Convert.ToDouble(Console.ReadLine());
-                                    Produto produto = new Produto(id, nome, marca, modelo, descricao, preco);
+                                    Produto produto = new Produto(nome, marca, modelo, descricao, preco);
                                     daoProduto.create(produto);
                                     Console.WriteLine("Produto cadastrado!");
                                     break;
