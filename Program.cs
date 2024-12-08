@@ -90,7 +90,7 @@ namespace Avaliacao1 {
                         do {
                             Console.WriteLine("\n==== PRODUTO ====");
                             Console.WriteLine("[1] Cadastrar Produto \t [2] Procurar Produto \t [3] Deletar Produto \t [4] Listar Produto \t [5] Sair");
-                            Console.WriteLine("\n Escolha uma opcao do menu:");
+                            Console.WriteLine("\n Escolha uma opção do menu:");
                             string entrada1 = Console.ReadLine();
                             if (!int.TryParse(entrada1, out op1))
                             {
@@ -101,8 +101,6 @@ namespace Avaliacao1 {
 
                             switch (op1) {
                                 case 1:
-                                    //Console.WriteLine("Informe o código do produto: ");
-                                    //id = Convert.ToInt16(Console.ReadLine());
                                     Console.WriteLine("Informe o nome do produto: ");
                                     nome = Console.ReadLine();
                                     Console.WriteLine("Informe a marca do produto: ");
@@ -148,8 +146,8 @@ namespace Avaliacao1 {
                         do {
                             Console.WriteLine("\n==== VENDA ====");
                             Console.WriteLine("[1] Registrar Venda \t [2] Procurar Venda \t [3] Atualizar Venda");
-                            Console.WriteLine("\n[4] Listar Vendas \t [5] Totalizar Vendas \t [6] Sair");
-                            Console.WriteLine("\n Escolha uma opcao do menu:");
+                            Console.WriteLine("[4] Listar Vendas \t [5] Totalizar Vendas \t [6] Sair");
+                            Console.WriteLine("\n Escolha uma opção do menu:");
                             string entrada1 = Console.ReadLine();
                             if (!int.TryParse(entrada1, out op1))
                             {
@@ -160,32 +158,63 @@ namespace Avaliacao1 {
 
                             switch (op1) {
                                 case 1:
+                                    bool adicionouAlgo = false;
+                                    int op2 = 0;
+                                    int idProduto;
                                     Console.WriteLine("Informe o id do cliente: ");
                                     id = Convert.ToInt16(Console.ReadLine());
-                                    if(daoCliente.get(id) != null) {
-                                        Vendas venda = new Vendas(daoCliente.get(id));
+                                    Cliente clienteVenda = daoCliente.get(id);
+                                    if (clienteVenda != null) {
+                                        Vendas venda = new Vendas(clienteVenda);
                                         do
                                         {
-                                            Console.WriteLine("Insira o código do produto: ");
-                                            id = Convert.ToInt16(Console.ReadLine());
-                                            if (daoProduto.get(id) != null)
-                                            {
-                                                venda.addProduto(daoProduto.get(id));
-                                                Console.WriteLine("Produto registrado!");
+                                            Console.WriteLine("\n" + clienteVenda.nome + ", escolha uma opção: ");
+                                            Console.WriteLine("[1] Listar produtos \t [2] Adicionar produto no carrinho \t [3] Cancelar compra");
+                                            if (adicionouAlgo) {
+                                                Console.WriteLine("[4] Finalizar compra");
                                             }
-                                        } while (id != 0 && id > 0);
-                                        if(venda.produtosVenda.Count == 0)
-                                            Console.WriteLine("Não é possível registrar venda sem produtos...");
-                                        else {
-                                            daoVenda.create(venda);
-                                            Console.WriteLine("Venda registrada com sucesso! ");
-                                        }
+                                            op2 = Convert.ToInt16(Console.ReadLine());
+
+                                            switch (op2) {
+                                                case 1:
+                                                    daoProduto.getAll();
+                                                    break;
+                                                case 2:
+                                                    Console.WriteLine("\nInsira o código do produto: ");
+                                                    idProduto = Convert.ToInt16(Console.ReadLine());
+                                                    Produto produto = daoProduto.get(idProduto);
+                                                    if(produto != null) {
+                                                        venda.addProduto(produto);
+                                                        Console.WriteLine("\n" + produto.nome + " foi adicionado ao carrinho!");
+                                                        adicionouAlgo = true;
+                                                    } else {
+                                                        Console.WriteLine("Produto não encontrado");
+                                                    }
+                                                    break;
+                                                case 3:
+                                                    Console.WriteLine("Compra cancelada");
+                                                    break;
+                                                case 4:
+                                                    if(venda.produtosVenda.Count == 0) {
+                                                        Console.WriteLine("Espertinho... adicione algo no carrinho para finalizar a compra");
+                                                        op2 = 0;
+                                                        break;
+                                                    }
+                                                    daoVenda.create(venda);
+                                                    Console.WriteLine("Obrigado!! Volte sempre! :D");
+                                                    break;
+                                                default:
+                                                    Console.WriteLine("Opção Inválida...");
+                                                    break;
+                                            }
+
+                                        } while (op2 != 3 && op2 != 4);
                                     } else {
                                         Console.WriteLine("Cliente não encontrado! ");
                                     }
                                     break;
                                 case 2:
-                                    Console.WriteLine("Insira o código do produto: ");
+                                    Console.WriteLine("Insira o código da venda: ");
                                     id = Convert.ToInt16(Console.ReadLine());
                                     if (daoVenda.get(id) != null)
                                     {

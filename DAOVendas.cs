@@ -96,7 +96,7 @@ namespace Avaliacao1 {
             {
                 String produtos = "";
                 foreach (Produto produto in venda.produtosVenda) {
-                    produtos += "\t-" + produto.modelo + "   ..." + produto.quantidadeProduto + "x";
+                    produtos += "\t- " + produto.nome + "............." + produto.quantidadeProduto + "x\n";
                 }
 
                 Console.WriteLine($"ID: {venda.id}");

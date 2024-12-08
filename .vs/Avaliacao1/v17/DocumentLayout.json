@@ -7,28 +7,28 @@
       "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\daovendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daovendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\daovendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daovendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\daoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\daoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29D021EB-4E28-42D2-B7D7-F6A9A5492F48}|Avaliacao1.csproj|solutionrelative:daoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,26 +62,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Vendas.cs",
               "DocumentMoniker": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\Vendas.cs",
               "RelativeDocumentMoniker": "Vendas.cs",
               "ToolTip": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\Vendas.cs",
               "RelativeToolTip": "Vendas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T16:17:10.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DAOVendas.cs",
               "DocumentMoniker": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\DAOVendas.cs",
               "RelativeDocumentMoniker": "DAOVendas.cs",
               "ToolTip": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\DAOVendas.cs",
               "RelativeToolTip": "DAOVendas.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwEgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T16:12:17.831Z",
               "EditorCaption": ""
@@ -101,32 +101,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "DAOProduto.cs",
               "DocumentMoniker": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\DAOProduto.cs",
               "RelativeDocumentMoniker": "DAOProduto.cs",
               "ToolTip": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\DAOProduto.cs",
               "RelativeToolTip": "DAOProduto.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAkwCUAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T15:45:57.953Z"
+              "WhenOpened": "2024-12-07T15:45:57.953Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DAOCliente.cs",
               "DocumentMoniker": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\DAOCliente.cs",
               "RelativeDocumentMoniker": "DAOCliente.cs",
               "ToolTip": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\DAOCliente.cs",
               "RelativeToolTip": "DAOCliente.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T23:19:24.846Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\Cliente.cs",
               "RelativeDocumentMoniker": "Cliente.cs",
@@ -145,7 +146,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Brunno PB\\source\\repos\\Avaliacao1TECPROG\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwG0AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAiwMcAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T22:54:47.025Z",
               "EditorCaption": ""
