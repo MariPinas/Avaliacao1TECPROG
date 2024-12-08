@@ -18,10 +18,16 @@ namespace Avaliacao1 {
 
 
             do {
-                Console.WriteLine("==== Sistema de Vendas ====");
+                Console.WriteLine("\n==== Sistema de Vendas ====");
                 Console.WriteLine("\n [1] Cliente \t [2] Produto \t [3] Venda \t [4] Sair ");
                 Console.WriteLine("\n Escolha uma opcao do menu:");
-                op = Convert.ToInt16(Console.ReadLine());
+                string entrada = Console.ReadLine();
+                if (!int.TryParse(entrada, out op)) {
+                    Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                    continue;
+                }
+
+
                 Console.WriteLine("=========================================");
 
                 switch (op) {
@@ -30,7 +36,12 @@ namespace Avaliacao1 {
                             Console.WriteLine("\n ==== CLIENTE ====");
                             Console.WriteLine("\n [1] Cadastrar Cliente \t [2] Procurar Cliente \t [3] Deletar Cliente \t [4] Listar Clientes \t [5] Sair");
                             Console.WriteLine("\n Escolha uma opcao do menu:");
-                            op1 = Convert.ToInt16(Console.ReadLine());
+                            string entrada1 = Console.ReadLine();
+                            if (!int.TryParse(entrada1, out op1))
+                            {
+                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                                continue;
+                            }
                             Console.WriteLine("\n ========================================= \n");
 
                             switch (op1) {
@@ -67,16 +78,25 @@ namespace Avaliacao1 {
                                 case 5:
                                     Console.WriteLine("Retornando ao menu principal...");
                                     break;
+                                default:
+                                    Console.WriteLine("Opção Inválida...");
+                                    break;
+
                             }
 
-                        } while (op1 > 0 && op1 < 5);
+                        } while (op1 != 5);
                         break;
                     case 2:
                         do {
-                            Console.WriteLine("==== PRODUTO ====");
+                            Console.WriteLine("\n==== PRODUTO ====");
                             Console.WriteLine("[1] Cadastrar Produto \t [2] Procurar Produto \t [3] Deletar Produto \t [4] Listar Produto \t [5] Sair");
                             Console.WriteLine("\n Escolha uma opcao do menu:");
-                            op1 = Convert.ToInt16(Console.ReadLine());
+                            string entrada1 = Console.ReadLine();
+                            if (!int.TryParse(entrada1, out op1))
+                            {
+                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                                continue;
+                            }
                             Console.WriteLine("=========================================");
 
                             switch (op1) {
@@ -117,17 +137,25 @@ namespace Avaliacao1 {
                                 case 5:
                                     Console.WriteLine("Retornando ao menu principal...");
                                     break;
+                                default:
+                                    Console.WriteLine("Opção Inválida...");
+                                    break;
                             }
 
-                        } while (op1 > 0 && op1 < 5);
+                        } while (op1 != 5);
                         break;
                     case 3:
                         do {
-                            Console.WriteLine("==== VENDA ====");
+                            Console.WriteLine("\n==== VENDA ====");
                             Console.WriteLine("[1] Registrar Venda \t [2] Procurar Venda \t [3] Atualizar Venda");
-                            Console.WriteLine("\n [4] Listar Vendas \t [5] Totalizar Vendas \t [6] Sair");
+                            Console.WriteLine("\n[4] Listar Vendas \t [5] Totalizar Vendas \t [6] Sair");
                             Console.WriteLine("\n Escolha uma opcao do menu:");
-                            op1 = Convert.ToInt16(Console.ReadLine());
+                            string entrada1 = Console.ReadLine();
+                            if (!int.TryParse(entrada1, out op1))
+                            {
+                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                                continue;
+                            }
                             Console.WriteLine("=========================================");
 
                             switch (op1) {
@@ -209,15 +237,22 @@ namespace Avaliacao1 {
                                 case 6:
                                     Console.WriteLine("Retornando ao menu principal...");
                                     break;
+                                default:
+                                    Console.WriteLine("Opção Inválida...");
+                                    break;
+
                             }
 
-                        } while (op1 > 0 && op1 < 6);
+                        } while (op1 != 6);
+                        break;
+                    case 4:
+                        Console.WriteLine("Encerrando o programa...");
                         break;
                     default:
                         Console.WriteLine("Opção Inválida...");
                         break;
                 }
-            } while (op > 0 && op != 5);
+            } while (op != 4);
 
         }
     }
