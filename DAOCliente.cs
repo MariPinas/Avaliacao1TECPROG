@@ -44,9 +44,9 @@ namespace Avaliacao1 {
             Console.WriteLine("=== Listando Clientes ===");
             foreach (Cliente c in databaseClientes) {
                 Console.WriteLine($"--*  Cliente número {c.id}  *--");
-                Console.WriteLine($"Nome: {c.nome}");
-                Console.WriteLine($"Nome: {c.idade}");
-                Console.WriteLine($"CPF: {c.cpf}");          
+                Console.WriteLine($"Nome : {c.nome}");
+                Console.WriteLine($"Idade: {c.idade}");
+                Console.WriteLine($"CPF  : {c.cpf}");          
             }
             Console.WriteLine("=========================");
         }
@@ -54,8 +54,9 @@ namespace Avaliacao1 {
         public void printById(int idCliente) {
             Cliente cliente = get(idCliente);
             if (cliente != null) {
-                Console.WriteLine($"Nome: {cliente.nome}");
-                Console.WriteLine($"CPF: {cliente.cpf}");
+                Console.WriteLine($"Nome : {cliente.nome}");
+                Console.WriteLine($"Idade: {cliente.idade}");
+                Console.WriteLine($"CPF  : {cliente.cpf}");
             }
         }
     }
