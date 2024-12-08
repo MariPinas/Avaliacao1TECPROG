@@ -51,17 +51,22 @@ namespace Avaliacao1 {
             Console.WriteLine("=========================");
         }
 
-        public void printById(int idProduto)
-        {
+        public void printById(int idProduto){
             Produto produto = get(idProduto);
             if (produto != null)
             {
+                Console.WriteLine("===========*============");
                 Console.WriteLine($"ID: {produto.id}");
                 Console.WriteLine($"Marca: {produto.marca}");
                 Console.WriteLine($"Modelo: {produto.modelo}");
                 Console.WriteLine($"Descrição: {produto.descricao}");
                 Console.WriteLine($"Preço: R${produto.preco}");
+                Console.WriteLine("===========*============");
             }
+        }
+
+        public int GetProdutoCount() {
+            return databaseProduto.Count;
         }
     }
 }

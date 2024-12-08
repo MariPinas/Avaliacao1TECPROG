@@ -33,7 +33,7 @@ namespace Avaliacao1 {
         }
 
         public Boolean getVendaDoCliente(int idCliente) {
-            // este método verifica se o cliente possui vendas registradas
+            // este método verifica se o cliente esta em vendas registradas
 
             foreach (Vendas venda in databaseVendas) {
                 if (venda.cliente.id == idCliente)
@@ -104,6 +104,10 @@ namespace Avaliacao1 {
                 Console.WriteLine($"Total da venda: {venda.total} REAIS");
                 Console.WriteLine($"Produtos: \n{produtos}");
             }
+        }
+
+        public int GetVendaCount() {
+            return databaseVendas.Count;
         }
     }
 }

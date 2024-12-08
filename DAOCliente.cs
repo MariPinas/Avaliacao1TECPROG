@@ -62,5 +62,9 @@ namespace Avaliacao1 {
 
             }
         }
+
+        public int GetClienteCount() {
+            return databaseClientes.Count;
+        }
     }
 }

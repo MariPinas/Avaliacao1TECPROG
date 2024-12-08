@@ -29,6 +29,16 @@ namespace Avaliacao1 {
             Console.WriteLine("========================================================");
         }
 
+        public void ExibirCarrinho() { 
+            Console.WriteLine($"ID do Comprador: {this.cliente.id} ");
+
+            foreach (Produto i in produtosVenda) {
+                i.getProduto(i);
+            }
+            Console.WriteLine($"TOTAL DO CARRINHO: {this.total} REAIS");
+            Console.WriteLine("========================================================");
+        }
+
         public Boolean addProduto(Produto p) {
             
             if (p == null) {
