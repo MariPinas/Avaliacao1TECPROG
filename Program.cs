@@ -16,6 +16,7 @@ namespace Avaliacao1 {
             string nome, cpf, marca, modelo, descricao;
             double preco;
 
+            // AUTORES: Brunno Bocardo, Flavia Goes e Mariana Pereira
 
             do {
                 Console.Clear();
