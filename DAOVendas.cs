@@ -12,16 +12,7 @@ namespace Avaliacao1 {
             databaseVendas.Add(venda);
         }
 
-        public Boolean update(Vendas venda) {
-            Vendas vendaExiste = get(venda.id);
-            if (vendaExiste != null) {
-                vendaExiste.cliente = venda.cliente;
-                vendaExiste.produtosVenda = venda.produtosVenda;
-                vendaExiste.total = venda.total;
-                return true;
-            }
-            return false;
-        }
+        
 
         public Vendas get(int id) {
             foreach (Vendas v in databaseVendas) {
@@ -106,7 +97,7 @@ namespace Avaliacao1 {
             }
         }
 
-        public int GetVendaCount() {
+        public int getVendaCount() {
             return databaseVendas.Count;
         }
     }

@@ -78,6 +78,10 @@ namespace Avaliacao1 {
                                     Console.WriteLine("Cliente cadastrado!");
                                     break;
                                 case 2:
+                                    if (daoCliente.getClienteCount() == 0) {
+                                        Console.WriteLine("Nenhum cliente foi cadastrado.");
+                                        continue;
+                                    }
                                     Console.WriteLine("Informe o codigo do cliente: ");
                                     id = Convert.ToInt16(Console.ReadLine());
                                     if (daoCliente.get(id) != null) {
@@ -168,6 +172,10 @@ namespace Avaliacao1 {
                                     Console.WriteLine("Produto cadastrado!");
                                     break;
                                 case 2:
+                                    if (daoProduto.getProdutoCount() == 0) {
+                                        Console.WriteLine("Nenhum produto foi cadastrado.");
+                                        continue;
+                                    }
                                     Console.WriteLine("Informe o código do produto: ");
                                     id = Convert.ToInt16(Console.ReadLine());
                                     if (daoProduto.get(id) != null) {
@@ -198,8 +206,8 @@ namespace Avaliacao1 {
                         Console.Clear();
                         do {
                             Console.WriteLine("\n\t\t\t==== VENDA ====");
-                            Console.WriteLine("\n[1] Registrar Venda \t [2] Procurar Venda \t [3] Atualizar Venda");
-                            Console.WriteLine("[4] Listar Vendas \t [5] Totalizar Vendas \t [6] Sair");
+                            Console.WriteLine("\n\t[1] Registrar Venda\t[2] Procurar Venda");
+                            Console.WriteLine("\n[3] Listar Vendas\t[4] Totalizar Vendas \t [5] Sair");
                             Console.WriteLine("\n Escolha uma opção do menu:");
                             string entrada1 = Console.ReadLine();
                             if (!int.TryParse(entrada1, out op1)) {
@@ -210,7 +218,7 @@ namespace Avaliacao1 {
                             switch (op1) {
                                 case 1:
 
-                                    if (daoCliente.GetClienteCount() == 0 || daoProduto.GetProdutoCount() == 0) {
+                                    if (daoCliente.getClienteCount() == 0 || daoProduto.getProdutoCount() == 0) {
                                         Console.WriteLine("Nenhum cliente ou produto cadastrado. Não é possível realizar vendas.");
                                         continue;
                                     }
@@ -219,6 +227,7 @@ namespace Avaliacao1 {
                                     int idProduto;
                                     Console.WriteLine("Informe o id do cliente: ");
                                     id = Convert.ToInt16(Console.ReadLine());
+                                    
                                     Cliente clienteVenda = daoCliente.get(id);
                                     if (clienteVenda != null) {
                                         Vendas venda = new Vendas(clienteVenda);
@@ -277,7 +286,7 @@ namespace Avaliacao1 {
                                     }
                                     break;
                                 case 2:
-                                    if (daoVenda.GetVendaCount() == 0) {
+                                    if (daoVenda.getVendaCount() == 0) {
                                         Console.WriteLine("Nenhuma venda foi realizada.");
                                         continue;
                                     }
@@ -290,40 +299,12 @@ namespace Avaliacao1 {
                                         Console.WriteLine("Venda não encontrada! ");
                                     break;
                                 case 3:
-                                    // testar a atualização da venda
-                                    // modifique essa parte se necessário
-                                    Console.WriteLine("Informe o código da venda: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
-                                    if (daoVenda.get(id) != null) {
-                                        Cliente cliente = daoVenda.get(id).cliente;
-                                        Vendas venda = new Vendas(cliente);
-                                        do {
-                                            Console.WriteLine("Insira o código do produto: ");
-                                            id = Convert.ToInt16(Console.ReadLine());
-                                            if (daoProduto.get(id) != null) {
-                                                venda.addProduto(daoProduto.get(id));
-                                                Console.WriteLine("Produto registrado!");
-                                            }
-
-                                        } while (id != 0 && id > 0);
-                                        if (venda.produtosVenda.Count == 0)
-                                            Console.WriteLine("Não é possível atualizar venda sem produtos...");
-                                        else {
-                                            if (daoVenda.update(venda) == true)
-                                                Console.WriteLine("Venda atualizada com sucesso!");
-                                            else
-                                                Console.WriteLine("Não foi possível atualizar a venda...");
-                                        }
-                                    } else
-                                        Console.WriteLine("Código inválido ou inexistente! ");
-                                    break;
-                                case 4:
                                     daoVenda.getAll();
                                     break;
-                                case 5:
+                                case 4:
                                     daoVenda.getTotalizacao();
                                     break;
-                                case 6:
+                                case 5:
                                     Console.WriteLine("Retornando ao menu principal...");
                                     break;
                                 default:
@@ -332,7 +313,7 @@ namespace Avaliacao1 {
 
                             }
 
-                        } while (op1 != 6);
+                        } while (op1 != 5);
                         break;
                     case 4:
                         Console.WriteLine("Encerrando o programa...");

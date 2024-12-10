@@ -65,7 +65,7 @@ namespace Avaliacao1 {
             }
         }
 
-        public int GetProdutoCount() {
+        public int getProdutoCount() {
             return databaseProduto.Count;
         }
     }
