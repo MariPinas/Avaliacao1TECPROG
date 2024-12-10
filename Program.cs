@@ -24,7 +24,7 @@ namespace Avaliacao1 {
                 Console.WriteLine("\n Escolha uma opcao do menu:");
                 string entrada = Console.ReadLine();
                 if (!int.TryParse(entrada, out op)) {
-                    Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                    Console.WriteLine("\n--- Opção inválida - digite um número válido ---\n");
                     continue;
                 }
 
@@ -40,7 +40,7 @@ namespace Avaliacao1 {
                             Console.WriteLine("\n Escolha uma opcao do menu:");
                             string entrada1 = Console.ReadLine();
                             if (!int.TryParse(entrada1, out op1)) {
-                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---\n");
                                 continue;
                             }
                             Console.WriteLine("\n ====================*==================== \n");
@@ -75,34 +75,46 @@ namespace Avaliacao1 {
 
                                     Cliente cliente = new Cliente(nome, idade, cpf);
                                     daoCliente.create(cliente);
-                                    Console.WriteLine("Cliente cadastrado!");
+                                    Console.WriteLine("\nCliente cadastrado!");
                                     break;
                                 case 2:
                                     if (daoCliente.getClienteCount() == 0) {
-                                        Console.WriteLine("Nenhum cliente foi cadastrado.");
+                                        Console.WriteLine("\nNenhum cliente foi cadastrado.");
                                         continue;
                                     }
-                                    Console.WriteLine("Informe o codigo do cliente: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
+                                    do {
+                                        Console.WriteLine("Informe o código do cliente: ");
+                                        entrada = Console.ReadLine();
+                                        if (!int.TryParse(entrada, out id) || id <= 0) {
+                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
+                                        }
+                                    } while (id <= 0);
                                     if (daoCliente.get(id) != null) {
-                                        Console.WriteLine("Cliente encontrado! :D");
+                                        Console.WriteLine("\nCliente encontrado! :D");
                                         daoCliente.printById(daoCliente.get(id).id);
                                     } else
-                                        Console.WriteLine("Cliente não cadastrado! ");
+                                        Console.WriteLine("\nCliente não cadastrado! ");
                                     break;
                                 case 3:
-                                    Console.WriteLine("Informe o codigo do cliente: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
+                                
+                                    do {
+                                        Console.WriteLine("Informe o código do cliente: ");
+                                        entrada = Console.ReadLine();
+                                        if (!int.TryParse(entrada, out id) || id <= 0) {
+                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
+                                        }
+                                    } while (id <= 0);
+                                    
                                     daoCliente.delete(id, daoVenda);
                                     break;
                                 case 4:
                                     daoCliente.getAll();
                                     break;
                                 case 5:
-                                    Console.WriteLine("Retornando ao menu principal...");
+                                    Console.WriteLine("\nRetornando ao menu principal...");
                                     break;
                                 default:
-                                    Console.WriteLine("Opção Inválida...");
+                                    Console.WriteLine("\nOpção Inválida...");
                                     break;
 
                             }
@@ -117,7 +129,7 @@ namespace Avaliacao1 {
                             Console.WriteLine("\n Escolha uma opção do menu:");
                             string entrada1 = Console.ReadLine();
                             if (!int.TryParse(entrada1, out op1)) {
-                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---\n");
                                 continue;
                             }
                             Console.WriteLine("\n ====================*==================== \n");
@@ -125,10 +137,10 @@ namespace Avaliacao1 {
                             switch (op1) {
                                 case 1:
                                     do {
-                                        Console.WriteLine("\nInforme o nome do produto: ");
+                                        Console.WriteLine("\nInforme o nome do produto: \n");
                                         nome = Console.ReadLine();
                                         if (string.IsNullOrWhiteSpace(nome)) {
-                                            Console.WriteLine("\n--- O nome do produto não pode estar vazio. Tente novamente. ---");
+                                            Console.WriteLine("\n--- O nome do produto não pode estar vazio. Tente novamente. ---\n");
                                         }
                                     } while (string.IsNullOrWhiteSpace(nome));
 
@@ -137,7 +149,7 @@ namespace Avaliacao1 {
                                         Console.WriteLine("\nInforme a marca do produto: ");
                                         marca = Console.ReadLine();
                                         if (string.IsNullOrWhiteSpace(marca)) {
-                                            Console.WriteLine("\n--- A marca do produto não pode estar vazia. Tente novamente. ---");
+                                            Console.WriteLine("\n--- A marca do produto não pode estar vazia. Tente novamente. ---\n");
                                         }
                                     } while (string.IsNullOrWhiteSpace(marca));
 
@@ -146,7 +158,7 @@ namespace Avaliacao1 {
                                         Console.WriteLine("\nInforme o modelo do produto: ");
                                         modelo = Console.ReadLine();
                                         if (string.IsNullOrWhiteSpace(modelo)) {
-                                            Console.WriteLine("\n--- O modelo do produto não pode estar vazio. Tente novamente. ---");
+                                            Console.WriteLine("\n--- O modelo do produto não pode estar vazio. Tente novamente. ---\n");
                                         }
                                     } while (string.IsNullOrWhiteSpace(modelo));
 
@@ -155,7 +167,7 @@ namespace Avaliacao1 {
                                         Console.WriteLine("\nInforme a descrição do produto: ");
                                         descricao = Console.ReadLine();
                                         if (string.IsNullOrWhiteSpace(descricao)) {
-                                            Console.WriteLine("\n--- A descrição do produto não pode estar vazia. Tente novamente. ---");
+                                            Console.WriteLine("\n--- A descrição do produto não pode estar vazia. Tente novamente. ---\n");
                                         }
                                     } while (string.IsNullOrWhiteSpace(descricao));
 
@@ -164,7 +176,7 @@ namespace Avaliacao1 {
                                         Console.WriteLine("\nInforme o preço do produto: ");
                                         entrada = Console.ReadLine();
                                         if (!double.TryParse(entrada, out preco) || preco <= 0) {
-                                            Console.WriteLine("\n--- Preço inválido - insira um valor numérico válido. ---");
+                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
                                         }
                                     } while (preco <= 0);
                                     Produto produto = new Produto(nome, marca, modelo, descricao, preco);
@@ -176,27 +188,38 @@ namespace Avaliacao1 {
                                         Console.WriteLine("Nenhum produto foi cadastrado.");
                                         continue;
                                     }
-                                    Console.WriteLine("Informe o código do produto: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
+                                    do {
+                                        Console.WriteLine("Informe o código do produto: ");
+                                        entrada = Console.ReadLine();
+                                        if (!int.TryParse(entrada, out id) || id <= 0) {
+                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
+                                        }
+                                    } while (id <= 0);
                                     if (daoProduto.get(id) != null) {
-                                        Console.WriteLine("Produto encontrado com sucesso! :D");
+                                        Console.WriteLine("\nProduto encontrado com sucesso! :D\n");
                                         daoProduto.printById(daoProduto.get(id).id);
                                     } else
-                                        Console.WriteLine("Produto não encontrado!");
+                                        Console.WriteLine("\nProduto não encontrado!\n");
                                     break;
                                 case 3:
-                                    Console.WriteLine("Informe o código do produto: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
+                                    
+                                    do {
+                                        Console.WriteLine("Informe o código do produto: ");
+                                        entrada = Console.ReadLine();
+                                        if (!int.TryParse(entrada, out id) || id <= 0) {
+                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
+                                        }
+                                    } while (id <= 0);
                                     daoProduto.delete(id, daoVenda);
                                     break;
                                 case 4:
                                     daoProduto.getAll();
                                     break;
                                 case 5:
-                                    Console.WriteLine("Retornando ao menu principal...");
+                                    Console.WriteLine("\nRetornando ao menu principal...");
                                     break;
                                 default:
-                                    Console.WriteLine("Opção Inválida...");
+                                    Console.WriteLine("\nOpção Inválida...");
                                     break;
                             }
 
@@ -211,7 +234,7 @@ namespace Avaliacao1 {
                             Console.WriteLine("\n Escolha uma opção do menu:");
                             string entrada1 = Console.ReadLine();
                             if (!int.TryParse(entrada1, out op1)) {
-                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---");
+                                Console.WriteLine("\n--- Opção inválida - digite um número válido ---\n");
                                 continue;
                             }
                             Console.WriteLine("\n ====================*==================== \n");
@@ -219,15 +242,19 @@ namespace Avaliacao1 {
                                 case 1:
 
                                     if (daoCliente.getClienteCount() == 0 || daoProduto.getProdutoCount() == 0) {
-                                        Console.WriteLine("Nenhum cliente ou produto cadastrado. Não é possível realizar vendas.");
+                                        Console.WriteLine("\n\nNenhum cliente ou produto cadastrado. Não é possível realizar vendas.");
                                         continue;
                                     }
                                     bool adicionouAlgo = false;
                                     int op2 = 0;
                                     int idProduto;
-                                    Console.WriteLine("Informe o id do cliente: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
-                                    
+                                    do {
+                                        Console.WriteLine("\nInforme o id do cliente: ");
+                                        entrada = Console.ReadLine();
+                                        if (!int.TryParse(entrada, out id) || id <= 0) {
+                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
+                                        }
+                                    } while (id <= 0);
                                     Cliente clienteVenda = daoCliente.get(id);
                                     if (clienteVenda != null) {
                                         Vendas venda = new Vendas(clienteVenda);
@@ -244,8 +271,14 @@ namespace Avaliacao1 {
                                                     daoProduto.getAll();
                                                     break;
                                                 case 2:
-                                                    Console.WriteLine("\nInsira o código do produto: ");
-                                                    idProduto = Convert.ToInt16(Console.ReadLine());
+                                                    do {
+                                                        Console.WriteLine("\nInsira o código do produto: ");
+                                                        entrada = Console.ReadLine();
+                                                        if (!int.TryParse(entrada, out idProduto) || idProduto <= 0) {
+                                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
+                                                        }
+                                                    } while (idProduto <= 0);
+                                                             
                                                     Produto produto = daoProduto.get(idProduto);
                                                     if (produto != null) {
                                                         venda.addProduto(produto);
@@ -264,7 +297,7 @@ namespace Avaliacao1 {
                                                     }
                                                     break;
                                                 case 4:
-                                                    Console.WriteLine("Compra cancelada");
+                                                    Console.WriteLine("\n\nCompra cancelada");
                                                     break;
                                                 case 5:
                                                     if (venda.produtosVenda.Count == 0) {
@@ -290,13 +323,18 @@ namespace Avaliacao1 {
                                         Console.WriteLine("Nenhuma venda foi realizada.");
                                         continue;
                                     }
-                                    Console.WriteLine("Insira o código da venda: ");
-                                    id = Convert.ToInt16(Console.ReadLine());
+                                    do {
+                                        Console.WriteLine("Informe o código da venda: ");
+                                        entrada = Console.ReadLine();
+                                        if (!int.TryParse(entrada, out id) || id <= 0) {
+                                            Console.WriteLine("\n--- ID inválido - insira um valor numérico válido. ---\n");
+                                        }
+                                    } while (id <= 0);
                                     if (daoVenda.get(id) != null) {
-                                        Console.WriteLine("Venda encontrada! :D");
+                                        Console.WriteLine("\nVenda encontrada! :D");
                                         daoVenda.printById(daoVenda.get(id).id);
                                     } else
-                                        Console.WriteLine("Venda não encontrada! ");
+                                        Console.WriteLine("\nVenda não encontrada! ");
                                     break;
                                 case 3:
                                     daoVenda.getAll();
@@ -305,10 +343,10 @@ namespace Avaliacao1 {
                                     daoVenda.getTotalizacao();
                                     break;
                                 case 5:
-                                    Console.WriteLine("Retornando ao menu principal...");
+                                    Console.WriteLine("\nRetornando ao menu principal...");
                                     break;
                                 default:
-                                    Console.WriteLine("Opção Inválida...");
+                                    Console.WriteLine("\nOpção Inválida...");
                                     break;
 
                             }
@@ -316,10 +354,10 @@ namespace Avaliacao1 {
                         } while (op1 != 5);
                         break;
                     case 4:
-                        Console.WriteLine("Encerrando o programa...");
+                        Console.WriteLine("\nEncerrando o programa...");
                         break;
                     default:
-                        Console.WriteLine("Opção Inválida...");
+                        Console.WriteLine("\nOpção Inválida...");
                         break;
                 }
             } while (op != 4);
